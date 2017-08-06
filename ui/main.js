@@ -1,6 +1,9 @@
 console.log('Loaded!');
 
-var img = document.getelementbyID('madi');
+var element = document.getElementById('main.txt');
+
+
+var img =document.getElementById('madi');
 
 img.onclick = function ()
 {
