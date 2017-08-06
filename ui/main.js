@@ -2,7 +2,7 @@ console.log('Loaded!');
 
 var element = document.getElementById('main-text');
 
-element.InnerrHTML = 'New Value';
+element.innerHTML = 'New Value';
 
 var img =document.getElementById('madi');
 var marginLLeft = 0;
