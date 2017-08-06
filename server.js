@@ -80,8 +80,7 @@ var articles = {
 }
 
 function createTemplate(data){
-    //var title = data.title;
-    var title= 'ABC';
+    var title = data.title;
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
@@ -124,6 +123,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName', function (req, res) {
   //res.send(createTemplate(articleOne));
   var articleName= req.params.articleName;
+  alert(articleName);
   res.send(createTemplate(articles[articleName]));
 });
 
