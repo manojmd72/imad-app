@@ -4,6 +4,7 @@ var element = document.getElementById('main.txt');
 
 
 var img =document.getElementById('madi');
+var marginLLeft = 0;
 
 function moveright(){
  marginLLeft= marginLeft+10;
