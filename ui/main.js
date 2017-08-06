@@ -1,5 +1,6 @@
 console.log('Loaded!');
 
+/*
 var element = document.getElementById('main-text');
 
 element.innerHTML = 'New Value';
@@ -18,4 +19,14 @@ img.onclick = function ()
 {
     //mg.style.marginLeft='100px';i
     var interval = setInterval(moveRight,100);    
+    };
+    
+    
+    */
+    var button = document.getElementById('counter');
+    var counter=0;
+    button.onclick= function(){
+        counter= counter+1;
+        var span= document.getElementById('counter');
+        span.innerHTML= counter.toString();
     };
