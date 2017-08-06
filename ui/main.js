@@ -2,11 +2,12 @@ console.log('Loaded!');
 
 var element = document.getElementById('main.txt');
 
+element.IneerHTML = 'New Value';
 
 var img =document.getElementById('madi');
 var marginLLeft = 0;
 
-function moveright(){
+function moveRight(){
  marginLLeft= marginLeft+10;
  img.style.marginLeft=marginLeft+'px';
  
