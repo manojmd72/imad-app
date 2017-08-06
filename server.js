@@ -90,7 +90,7 @@ function createTemplate(data){
         
       ` <html>
         <head>
-            <title>Article-One</title>    
+            <title>${title}}</title>    
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <link href="/ui/style.css" rel="stylesheet" />
          
@@ -101,24 +101,11 @@ function createTemplate(data){
                 <a href="/">Home</a>
             </div>
             
-            <h3>Article-One</h3>
+            <h3>${heading}/h3>
             
             <div> ${date}</div>
             
-            <div> 
-                <p>
-                    This is my first aticle content and you can see more information in next few days
-                   
-                </p>
-                 <p>
-                    This is my first aticle content and you can see more information in next few days
-                   
-                </p>
-                 <p>
-                    This is my first aticle content and you can see more information in next few days
-                   
-                 </p>
-            </div>
+            <div> ${content}</div>
         </body>
         
         </html>`;
