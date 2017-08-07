@@ -19,7 +19,7 @@ button.onclick= function(){
          
 };
          
-         request.open('GET', 'http://deshmukhmanoj.imad.hasura-app.io/counter', true);
+         request.open('GET', 'http://deshmukhmanoj.imad.hasura-app.io', true);
          request.send(null);
 };
 
