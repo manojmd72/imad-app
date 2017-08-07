@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-/*
+
 var articles = {
     
      'article-one': {
@@ -116,25 +116,27 @@ function createTemplate(data){
  return htmlTemplate;      
 }
 
-*/
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-/*
+app.get('/counter', function (req, res) {
+counter=counter+1;
+res.send(counter.toString());
+});
+
+
 app.get('/:articleName', function (req, res) {
   //res.send(createTemplate(articleOne));
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
 
-*/
 
-app.get('/counter', function (req, res) {
-counter=counter+1;
-res.send(counter.toString());
-});
+
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
