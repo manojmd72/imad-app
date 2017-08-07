@@ -3,7 +3,7 @@ console.log('Loaded!');
 var button = document.getElementById('counter');
 
 button.onclick= function(){
-
+console.log('inclick');
         var request = new XMLHttpRequest();
         request.onreadystatechange = function()
         {
