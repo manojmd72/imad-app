@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-
+var button = document.getElementById('counter');
 
 button.onclick= function(){
 
@@ -24,7 +24,7 @@ button.onclick= function(){
          request.send(null);
 };
 
-var button = document.getElementById('counter');
+
 
  var nameInput = document.getElementById('name');
  var name = nameInput.value;
