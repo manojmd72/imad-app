@@ -8,6 +8,8 @@ var button = document.getElementById('counter');
 button.onclick= function(){
         
         //var request = new XMLHttpRequest();
+
+/*
         var request = new XMLHttpRequest();
         request.onreadystatechange = function()
         {
@@ -27,6 +29,8 @@ button.onclick= function(){
          request.open('GET', 'http://deshmukhmanoj.imad.hasura-app.io/counter', true);
          request.send(null);
 };
+
+*/
 
  var nameInput = document.getElementById('name');
  var name = nameInput.value;
