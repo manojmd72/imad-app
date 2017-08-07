@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-var button = document.getElementById('counter');
+
 
 button.onclick= function(){
 
@@ -20,10 +20,11 @@ button.onclick= function(){
          
 };
          
-         request.open('GET', 'http://deshmukhmanoj.imad.hasura-app.io/counter=100', true);
+         request.open('GET', 'http://deshmukhmanoj.imad.hasura-app.io/counter', true);
          request.send(null);
 };
 
+var button = document.getElementById('counter');
 
  var nameInput = document.getElementById('name');
  var name = nameInput.value;
