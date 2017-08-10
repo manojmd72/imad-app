@@ -1,6 +1,6 @@
 
 console.log('Loaded Now');
-console.log('hello'
+console.log('hello');
 
 
 var express = require('express');
@@ -9,9 +9,7 @@ var path = require('path');
 
 var Pool = require('pg').Pool;
 
-<script>
 
-</script>
     
     
 var config = {
