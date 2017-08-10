@@ -8,7 +8,11 @@ var path = require('path');
 var Pool = require('pg').Pool;
 
 
-    
+app.get('/favicon.ico', function (req, res) {
+
+  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
+
+});
     
 var config = {
   user: 'deshmukhmanoj',
