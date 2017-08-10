@@ -1,6 +1,4 @@
 
-console.log('Loaded Now');
-console.log('hello');
 
 
 var express = require('express');
