@@ -1,5 +1,5 @@
 console.log('Loaded!');
-/*
+
 
  var button = document.getElementById('counter');
 
@@ -41,7 +41,6 @@ button.onclick= function(){
  ul.innerHTML= list;
  };
  
-  */
-  
+      
             
    
