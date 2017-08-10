@@ -1,7 +1,6 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-alert ('path');
 
 var Pool = require('pg').Pool;
 
