@@ -136,6 +136,9 @@ function createTemplate(data){
 
 var pool = new Pool(config);
 
+app.get('/favicon.ico', function(req, res) {
+    res.status(204);
+});
 
 app.get('/test-db', function (req, res) {
     
