@@ -1,6 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+alert ('path');
 var Pool = require('pg').Pool;
 
 var config = {
@@ -9,7 +10,6 @@ var config = {
     host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
-    
     
     };
 
