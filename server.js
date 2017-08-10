@@ -8,12 +8,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 
 
-app.get('/favicon.ico', function (req, res) {
 
-  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
-
-});
-    
 var config = {
   user: 'deshmukhmanoj',
   database:'deshmukhmanoj',
@@ -140,7 +135,12 @@ function createTemplate(data){
 
 var pool = new Pool(config);
 
+app.get('/favicon.ico', function (req, res) {
 
+  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
+
+});
+    
 
 app.get('/test-db', function (req, res) {
     
