@@ -18,129 +18,9 @@ var config = {
 };
 
 
-
 var app = express();
 app.use(morgan('combined'));
 
-
-var articles = {
-    
-     'article-one': {
-        title: 'Article One',
-        heading: 'Article One',
-        date: 'Sep5, 2016',
-        content:
-        
-        `<div> 
-                <p>
-                    This is my first aticle content and you can see more information in next few days
-                   
-                </p>
-                 <p>
-                    This is my first aticle content and you can see more information in next few days
-                   
-                </p>
-                 <p>
-                    This is my first aticle content and you can see more information in next few days
-                   
-            </p>
-            </div>`
-         },
-         
-     'article-two': {
-        
-        title: 'Article Two',
-        heading: 'Article Two',
-        date: 'Sep5, 2016',
-        content:
-        
-        `<div> 
-                <p>
-                    This is my second aticle content and you can see more information in next few days
-                   
-                </p>
-                 <p>
-                    This is my second aticle content and you can see more information in next few days
-                   
-                </p>
-                 <p>
-                    This is my second aticle content and you can see more information in next few days
-                   
-            </p>
-            </div>`   
-        
-    }  ,
-    
-     'article-three':  {
-        
-        title: 'Article Three',
-        heading: 'Article Three',
-        date: 'Sep5, 2016',
-        content:
-        
-        `<div> 
-                <p>
-                    This is my third aticle content and you can see more information in next few days
-                   
-                </p>
-                 <p>
-                    This is my thitd aticle content and you can see more information in next few days
-                   
-                </p>
-                 <p>
-                    This is my third aticle content and you can see more information in next few days
-                   
-            </p>
-            </div>`   
-        
-    }     
-         
-}
-
-function createTemplate(data){
-    var title = data.title;
-    var date = data.date;
-    var heading = data.heading;
-    var content = data.content;
-    
-
-    var htmlTemplate = 
-        
-      ` <html>
-        <head>
-            <title> 
-                ${title} 
-            </title>    
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <link href="/ui/style.css" rel="stylesheet" />
-         
-        </head>
-       
-        <body>
-            <div>
-                <a href="/">Home</a>
-            </div>
-            
-            <h3>${heading}</h3>
-            
-            <div> ${date}</div>
-            
-            <div> ${content}</div>
-        </body>
-        
-        </html>`;
-
- return htmlTemplate;      
-}
-
-var pool = new Pool(config);
-
-app.get('/favicon.ico', function (req, res) {
-
-  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
-
-});
-    
 
 app.get('/test-db', function (req, res) {
     
@@ -160,23 +40,6 @@ app.get('/', function (req, res) {
 
 
 
-/*
-app.get('/counter', function (req, res) {
-var counter=counter+1;
-res.send(counter.toString());
-});
-*/
-
-
-app.get('/:articleName', function (req, res) {
-  //res.send(createTemplate(articleOne));
-  var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
-});
-
-
-
-
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
@@ -190,9 +53,6 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
-
-
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
