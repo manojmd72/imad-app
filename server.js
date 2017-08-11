@@ -19,7 +19,8 @@ var app = express();
 app.use(morgan('combined'));
 
 app.get('/test-db', function (req, res) {
-    
+    res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+   /* 
     pool.query('SELECT * FROM test', function(err,result)    {
         if(err) {
             res.status(500).send(err.toString());
@@ -28,6 +29,10 @@ app.get('/test-db', function (req, res) {
             result.send(JSON.stringify(result));
         }
     });
+
+  */
+  
+    
 });
 
 app.get('/', function (req, res) {
