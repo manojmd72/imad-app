@@ -1,7 +1,6 @@
 console.log('Loaded!');
 
-
- var button = document.getElementById('counter');
+var button = document.getElementById('counter');
 
 button.onclick= function(){
         var request = new XMLHttpRequest();
@@ -40,7 +39,7 @@ button.onclick= function(){
  var ul= document.getElementById('namelist');
  ul.innerHTML= list;
  };
- 
+
       
             
    
