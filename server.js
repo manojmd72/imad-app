@@ -15,6 +15,10 @@ var config = {
 };
 
 
+alert ("hello");
+
+
+
 
 var pool = new Pool (config);
 var app = express();
