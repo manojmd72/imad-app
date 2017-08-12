@@ -19,7 +19,7 @@ var app = express();
 app.use(morgan('combined'));
 
 app.get('/test-db', function (req, res) {
-   // res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+    res.sendFile(path.join(__dirname, 'ui', 'index.html'));
    // res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
    
     pool.query('SELECT * FROM test', function(err,result)    {
