@@ -11,7 +11,7 @@ var config = {
   database:'deshmukhmanoj',
   host:'db.imad.hasura-app.io',
   port:'5432',
-  password: 'db-deshmukhmanoj-42063'
+  password: process.env.DB_PASSWORD
 };
 
 var pool = new Pool (config);
@@ -26,9 +26,11 @@ app.get('/test-db', function (req, res) {
     pool.query('SELECT * FROM test', function(err,result)    {
         if(err) {
             
+            console.log('Error!');
             res.status(500).send(err.toString());
         }
         else {
+            console.log('Connection successful!');
             result.send(JSON.stringify(result));
         }
     });
