@@ -5,16 +5,21 @@ var path = require('path');
 
 var Pool = require('pg').Pool;
 
+var Pool = require('pg-pool')
+
+
 
 var config = {
   user: 'deshmukhmanoj',
   database:'deshmukhmanoj',
   host: 'db.imad.hasura-app.io',
   port: '5432',
-  password: process.env.DB_PASSWORD
+  password: 'db-deshmukhmanoj-42063'
 };
 
-var pool = new Pool (config);
+
+
+
 
 var app = express();
 app.use(morgan('combined'));
@@ -24,6 +29,7 @@ app.get('/', function (req, res) {
   
 });
 
+var pool = new Pool (config);
 
 app.get('/test-db', function (req, res) {
  
