@@ -42,7 +42,7 @@ console.log('I am in Query now .......................');
         }
         else {
             console.log('Connection successful!');
-            result.send(JSON.stringify(result));
+            res.send(JSON.stringify(result));
         }
     });
 
