@@ -32,10 +32,11 @@ console.log(pool);
 
 app.get('/test-db', function (req, res) {
 
-console.log(err);
+
 
 pool.query('SELECT * FROM test', function(err,result)    {
 
+console.log(err);
         if(err) {
             
             console.log('Error!');
