@@ -14,6 +14,8 @@ var config = {
 };
 
 
+console.log('Step 1');
+
 var app = express();
 app.use(morgan('combined'));
 
