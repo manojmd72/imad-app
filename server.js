@@ -9,6 +9,11 @@ var path = require('path');
 var Pool = require('pg-pool');
 
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  
+});
+
 
 var config = {
   user: 'deshmukhmanoj',
@@ -25,10 +30,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-  
-});
 
 var pool = new Pool (config);
 
