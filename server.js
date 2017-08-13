@@ -14,8 +14,6 @@ var config = {
 };
 
 
-console.log(config);
-
 var app = express();
 app.use(morgan('combined'));
 
@@ -28,21 +26,16 @@ app.get('/', function (req, res) {
 
 var pool = new Pool (config);
 
-
-console.log('Step A....');
 app.get('/test-db', function (req, res) {
 
 pool.query('SELECT * FROM test', function(err,result)    {
 
-console.log('I am in Query now .......................');
         if(err) {
             
-            console.log('Error!');
             res.status(500).send(err.toString());
         }
         else {
-            console.log('Connection successful!');
-            res.send(JSON.stringify(result));
+            res.send(JSON.stringify(result.rows));
         }
     });
 
