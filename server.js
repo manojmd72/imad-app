@@ -32,7 +32,7 @@ app.get('/test-db', function (req, res) {
 
 pool.query('SELECT * FROM test', function(err,result)    {
 
-
+console.log('I am in Query now .......................');
         if(err) {
             
             console.log('Error!');
