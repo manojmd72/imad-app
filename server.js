@@ -44,6 +44,62 @@ pool.query('SELECT * FROM test', function(err,result)    {
     
 });
 
+app.get('/articles/:articleName', function (req, res) {
+  //res.send(createTemplate(articleOne));
+  //var articleName = req.params.articleName;
+  
+  pool.query("SELECT * FROM article WHERE title='" +req.params.articleName + "'" , function(err,result){
+      if (err)
+      {
+          res.status(500).send(err.toString());
+      } else {
+          if (result.rows===0){
+           res.status(404).send('Article Not Found');   
+          } else {
+              var articleData = result.rows[0];
+              res.send(createTemplate(articleData));
+          }
+      } 
+      
+  });
+  
+});
+
+function createTemplate(data){
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+    
+    var htmlTemplate = 
+    
+  ` <html>
+        <head>
+            <title> 
+                ${title} 
+            </title>    
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link href="/ui/style.css" rel="stylesheet" />
+         
+        </head>
+       
+        <body>
+            <div>
+                <a href="/">Home</a>
+            </div>
+            
+            <h3>${heading}</h3>
+            
+            <div> ${date}</div>
+            
+            <div> ${content}</div>
+        </body>
+        
+    </html>`;
+
+ return htmlTemplate;      
+}
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
