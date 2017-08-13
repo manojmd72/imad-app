@@ -31,7 +31,9 @@ var pool = new Pool (config);
 console.log(pool);
 
 app.get('/test-db', function (req, res) {
- 
+
+console.log(err);
+
 pool.query('SELECT * FROM test', function(err,result)    {
 
         if(err) {
