@@ -1,5 +1,6 @@
-console.log('Server Loaded!');
+console.log('MainJs Loaded!');
 
+/*
 var button = document.getElementById('counter');
 
 button.onclick= function(){
@@ -24,6 +25,7 @@ button.onclick= function(){
 };
 
 
+*/
 
  var nameInput = document.getElementById('name');
  var Sname = nameInput.value;
