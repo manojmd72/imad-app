@@ -118,7 +118,7 @@ app.get('/check-login', function (req, res) {
         res.send ('You are logged in');
         
     }
-})
+});
 
 
 var pool = new Pool (config);
