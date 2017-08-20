@@ -1,6 +1,6 @@
 console.log('MainJs Loaded!');
 
-var submit = document.getElementByID('submit_btn');
+var submit = document.getElementById('submit_btn');
 
 submit.onclick = function () {
     
@@ -19,8 +19,8 @@ submit.onclick = function () {
     };
     
     //Make the Request
-    var username = document.getElementByID('username').value;
-    var password = document.getElementByID('password').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
     console.log(username);
     console.log(password);
     request.open('POST', 'http://deshmukhmanoj.imad.hasura-app.io/login',true);
