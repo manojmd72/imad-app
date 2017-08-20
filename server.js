@@ -80,14 +80,14 @@ var password = req.body.password;
             res.status(500).send(err.toString());
         }
         else {
-            if (result.lenght.rows===0){
+            if (result.rows.length===0){
                  res.send(403).send("Username/Password is invalid");        
              } else {
                      //Match the Password
                      var dbString = result.rows[0].password;
                      var salt = dbString.split('$')[2];
                      var hashedPassword = hash(password,salt); //create hash based on password
-                     if (hashedPassword==dbString){
+                     if (hashedPassword===dbString){
                      res.send("Credentials Correct");
                      }else {
                           res.send(403).send("Username/Password is invalid");
