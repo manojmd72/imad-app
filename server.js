@@ -112,7 +112,7 @@ var password = req.body.password;
 app.get('/check-login', function (req, res) {
     
     if (req.session && req.session.auth && req.session.auth.userid){
-        res.send ('You are logged in ' + req.session.auth.userId.toString() );
+        res.send ('You are logged in ' + req.session.auth.userId.toString());
         
     } else {
         res.send ('You are logged in');
