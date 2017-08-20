@@ -6,6 +6,11 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+
+var app = express();
+app.use(morgan('combined'));
+
+
 app.use(bodyParser.json());
 var session = require('express-session');
 
@@ -19,8 +24,6 @@ var config = {
 };
 
 
-var app = express();
-app.use(morgan('combined'));
 
 
 app.get('/', function (req, res) {
